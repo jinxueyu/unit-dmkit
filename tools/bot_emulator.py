@@ -41,7 +41,7 @@ def main(bot_id, token):
     session = "{\"session_id\":\"1\"}"
     while True:
         print "-----------------------------------------------------------------"
-        user_input = raw_input("input:\n")
+        user_input = raw_input("input:")
         user_input = user_input.strip()
         if not user_input:
             continue
@@ -65,7 +65,7 @@ def main(bot_id, token):
             "bot_session": session
         }
         obj = requests.post(url, data=json.dumps(payload), headers=json_header).json()
-        print "BOT:"
+        print "小暖:",
         # Not a valid response.
         if obj['error_code'] != 0:
             print "ERROR: %s" % obj['error_msg']
