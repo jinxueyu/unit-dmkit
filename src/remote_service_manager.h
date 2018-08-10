@@ -46,6 +46,8 @@ struct RemoteServiceResult {
 struct RemoteServiceChannel {
     // Name of the channel for rpc call
     std::string name;
+    // Query url for config
+    std::string api;
     // Protocol such as http
     std::string protocol;
     // Rpc channel instance

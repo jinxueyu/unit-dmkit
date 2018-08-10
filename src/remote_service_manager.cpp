@@ -85,6 +85,17 @@ int RemoteServiceManager::init(const char *path, const char *conf) {
             continue;
         }
         std::string naming_service_url = setting_iter->value.GetString();
+
+
+        //
+        setting_iter = settings.FindMember("service_api");
+        if (setting_iter == settings.MemberEnd() || !setting_iter->value.IsString()) {
+            APP_LOG(ERROR) << "Invalid service settings for " << service_name
+                           << ", expecting type String for property service_api. Skipped...";
+            continue;
+        }
+        std::string service_api = setting_iter->value.GetString();
+
         // Load balancer name such as random, rr.
         // All supported balancer can be found in BRPC docs. 
         setting_iter = settings.FindMember("load_balancer_name");
@@ -154,6 +165,7 @@ int RemoteServiceManager::init(const char *path, const char *conf) {
 
         RemoteServiceChannel service_channel {
             .name = service_name,
+            .api = service_api,
             .protocol = protocol,
             .channel = rpc_channel,
             .headers = headers
@@ -180,7 +192,7 @@ int RemoteServiceManager::call(const std::string& service_name,
     int latency = 0;
     if (service_channel->protocol == "http") {
         ret = this->call_http(service_channel->channel,
-                               params.url,
+                               service_channel->api+params.url,
                                params.http_method,
                                service_channel->headers,
                                params.payload,
