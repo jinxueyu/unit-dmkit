@@ -2,6 +2,50 @@
   {
     "output": [
       {
+        "assertion": [
+          {
+            "type": "eq",
+            "value": "{%disease_param%},做饭"
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "您想查询几月份的流量？{%disease_param%}"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "001"
+        }
+      },
+      {
+        "result": [
+          {
+            "type": "tts",
+            "value": "您的省内流量2GB,已用流量为{%usage%}GB；剩余流量为{%left%}G，全国流量包1GB，已用流量为1GB，剩余流量为0GB"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "002"
+        }
+      }
+    ],
+    "params": [{
+      "name": "disease_param",
+      "type": "slot_val",
+      "value": "disease"
+    }],
+    "trigger": {
+      "intent": "medical",
+      "slots": ["disease"],
+      "state": ""
+    }
+  },
+  {
+    "output": [
+      {
         "assertion": [], 
         "result": [
           {
@@ -17,7 +61,7 @@
     ], 
     "params": [], 
     "trigger": {
-      "intent": "INTENT_CHECK_DATA_USAGE", 
+      "intent": "ASK_SKILL",
       "slots": [], 
       "state": ""
     }
