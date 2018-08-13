@@ -127,6 +127,8 @@ int DialogManager::run(brpc::Controller* cntl) {
     APP_LOG(TRACE) << "dm session: " << dm_session;
     PolicyOutputSession session = PolicyOutputSession::from_json_str(dm_session);
 
+    APP_LOG(TRACE) << "debug 130 ";
+
     // The bot status is included in bot_session
     std::string bot_session = unit_response_doc["result"]["bot_session"].GetString();
     rapidjson::Document bot_session_doc;
@@ -136,11 +138,12 @@ int DialogManager::run(brpc::Controller* cntl) {
         this->send_error_response(cntl, -1, "Failed to parse bot session");
         return 0;
     }
+    APP_LOG(TRACE) << "debug 140 ";
     if (this->handle_unsatisfied_intent(cntl, unit_response_doc,
             bot_session_doc, dm_session) == 0) {
         return 0;
     }
-
+    APP_LOG(TRACE) << "debug 146 ";
     // Handle satify/understood intents
     std::string bot_id = unit_response_doc["result"]["bot_id"].GetString();
     QuResult* qu_result = QuResult::parse_from_dialog_state(
