@@ -11,7 +11,7 @@
         "result": [
           {
             "type": "tts",
-            "value": "您想查询几月份的流量？{%disease_param%}"
+            "value": "我生病了：{%disease_param%}"
           }
         ],
         "session": {
@@ -23,7 +23,7 @@
         "result": [
           {
             "type": "tts",
-            "value": "您的省内流量2GB,已用流量为{%usage%}GB；剩余流量为{%left%}G，全国流量包1GB，已用流量为1GB，剩余流量为0GB"
+            "value": "我没生病"
           }
         ],
         "session": {
@@ -39,377 +39,377 @@
     }],
     "trigger": {
       "intent": "medical",
-      "slots": ["disease"],
+      "slots": [],
       "state": ""
     }
   },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
-            "value": "您想查询几月份的流量？"
+            "type": "tts",
+            "value": "您想吃什么？"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "001"
         }
       }
-    ], 
-    "params": [], 
+    ],
+    "params": [],
     "trigger": {
-      "intent": "ASK_SKILL",
-      "slots": [], 
+      "intent": "restaurant_search",
+      "slots": ["food"],
       "state": ""
     }
-  }, 
+  },
   {
     "output": [
       {
         "assertion": [
           {
-            "type": "ge", 
+            "type": "ge",
             "value": "{%left%},1"
           }
-        ], 
+        ],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "您的省内流量2GB,已用流量为{%usage%}GB；剩余流量为{%left%}G，全国流量包1GB，已用流量为1GB，剩余流量为0GB"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "002"
         }
-      }, 
+      },
       {
         "assertion": [
           {
-            "type": "gt", 
+            "type": "gt",
             "value": "1,{%left%}"
           }
-        ], 
+        ],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "您的省内流量2GB，已用流量为{%usage%}GB，剩余流量为{%left%}G；全国流量包1GB，已用流量为1GB，剩余流量为0GB"
-          }, 
+          },
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "发现您的流量余额已经不足了，您是否需要续订流量包呢？"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "003"
         }
       }
-    ], 
+    ],
     "params": [
       {
-        "name": "time", 
-        "type": "slot_val", 
+        "name": "time",
+        "type": "slot_val",
         "value": "user_time"
-      }, 
+      },
       {
-        "name": "usage", 
-        "type": "func_val", 
+        "name": "usage",
+        "type": "func_val",
         "value": "demo_get_cellular_data_usage:{%time%}"
-      }, 
+      },
       {
-        "name": "left", 
-        "type": "func_val", 
+        "name": "left",
+        "type": "func_val",
         "value": "demo_get_cellular_data_left:{%time%}"
       }
-    ], 
+    ],
     "trigger": {
-      "intent": "INTENT_CHECK_DATA_USAGE", 
+      "intent": "INTENT_CHECK_DATA_USAGE",
       "slots": [
         "user_time"
-      ], 
+      ],
       "state": ""
     }
-  }, 
+  },
   {
     "output": [
       {
         "assertion": [
           {
-            "type": "ge", 
+            "type": "ge",
             "value": "{%left%},1"
           }
-        ], 
+        ],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "您的省内流量2GB,已用流量为{%usage%}GB；剩余流量为{%left%}G，全国流量包1GB，已用流量为1GB，剩余流量为0GB"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "002"
         }
-      }, 
+      },
       {
         "assertion": [
           {
-            "type": "gt", 
+            "type": "gt",
             "value": "1,{%left%}"
           }
-        ], 
+        ],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "您的省内流量2GB，已用流量为{%usage%}GB，剩余流量为{%left%}G；全国流量包1GB，已用流量为1GB，剩余流量为0GB"
-          }, 
+          },
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "发现您的流量余额已经不足了，您是否需要续订流量包呢？"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "003"
         }
       }
-    ], 
+    ],
     "params": [
       {
-        "name": "time", 
-        "type": "slot_val", 
+        "name": "time",
+        "type": "slot_val",
         "value": "user_time"
-      }, 
+      },
       {
-        "name": "usage", 
-        "type": "func_val", 
+        "name": "usage",
+        "type": "func_val",
         "value": "demo_get_cellular_data_usage:{%time%}"
-      }, 
+      },
       {
-        "name": "left", 
-        "type": "func_val", 
+        "name": "left",
+        "type": "func_val",
         "value": "demo_get_cellular_data_left:{%time%}"
       }
-    ], 
+    ],
     "trigger": {
-      "intent": "INTENT_CHECK_DATA_USAGE", 
+      "intent": "INTENT_CHECK_DATA_USAGE",
       "slots": [
         "user_time"
-      ], 
+      ],
       "state": "001"
     }
-  }, 
+  },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "王女士您好，我们有省内，全国，夜间三种流量包，您是要续订什么流量包？"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "004"
         }
       }
-    ], 
-    "params": [], 
+    ],
+    "params": [],
     "trigger": {
-      "intent": "INTENT_YES", 
-      "slots": [], 
+      "intent": "INTENT_YES",
+      "slots": [],
       "state": "003"
     }
-  }, 
+  },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "好的王女士，请问还有什么可以帮助您的吗"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "007"
         }
       }
-    ], 
-    "params": [], 
+    ],
+    "params": [],
     "trigger": {
-      "intent": "INTENT_NO", 
-      "slots": [], 
+      "intent": "INTENT_NO",
+      "slots": [],
       "state": "003"
     }
-  }, 
+  },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "好的，{%type%}有如下选择：{%options%}。请问您想续订哪种？"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "005"
         }
       }
-    ], 
+    ],
     "params": [
       {
-        "name": "type", 
-        "type": "slot_val", 
+        "name": "type",
+        "type": "slot_val",
         "value": "user_package_type"
-      }, 
+      },
       {
-        "name": "options", 
-        "type": "func_val", 
+        "name": "options",
+        "type": "func_val",
         "value": "demo_get_package_options:{%type%}"
       }
-    ], 
+    ],
     "trigger": {
-      "intent": "INTENT_BOOK_DATA_PACKAGE", 
+      "intent": "INTENT_BOOK_DATA_PACKAGE",
       "slots": [
         "user_package_type"
-      ], 
+      ],
       "state": "004"
     }
-  }, 
+  },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "好的王女士，您是想续订{%name%}的{%type%}吗？"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "006"
         }
       }
-    ], 
+    ],
     "params": [
       {
-        "name": "type", 
-        "type": "slot_val", 
+        "name": "type",
+        "type": "slot_val",
         "value": "user_package_type"
-      }, 
+      },
       {
-        "name": "name", 
-        "type": "slot_val", 
+        "name": "name",
+        "type": "slot_val",
         "value": "user_package_name"
       }
-    ], 
+    ],
     "trigger": {
-      "intent": "INTENT_BOOK_DATA_PACKAGE", 
+      "intent": "INTENT_BOOK_DATA_PACKAGE",
       "slots": [
-        "user_package_type", 
+        "user_package_type",
         "user_package_name"
-      ], 
+      ],
       "state": "005"
     }
-  }, 
+  },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "好的王女士，请问还有什么可以帮助您的吗"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "007"
         }
       }
-    ], 
-    "params": [], 
+    ],
+    "params": [],
     "trigger": {
-      "intent": "INTENT_YES", 
-      "slots": [], 
+      "intent": "INTENT_YES",
+      "slots": [],
       "state": "006"
     }
-  }, 
+  },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "王女士您好，我们有省内，全国，夜间三种流量包，您是要续订什么流量包？"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "004"
         }
       }
-    ], 
-    "params": [], 
+    ],
+    "params": [],
     "trigger": {
-      "intent": "INTENT_BOOK_DATA_PACKAGE", 
-      "slots": [], 
+      "intent": "INTENT_BOOK_DATA_PACKAGE",
+      "slots": [],
       "state": ""
     }
-  }, 
+  },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "王女士您好，我们有省内，全国，夜间三种流量包，您是要续订什么流量包？"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "004"
         }
       }
-    ], 
-    "params": [], 
+    ],
+    "params": [],
     "trigger": {
-      "intent": "INTENT_BOOK_DATA_PACKAGE", 
-      "slots": [], 
+      "intent": "INTENT_BOOK_DATA_PACKAGE",
+      "slots": [],
       "state": "003"
     }
-  }, 
+  },
   {
     "output": [
       {
-        "assertion": [], 
+        "assertion": [],
         "result": [
           {
-            "type": "tts", 
+            "type": "tts",
             "value": "好的，很高兴为您服务"
           }
-        ], 
+        ],
         "session": {
-          "context": {}, 
+          "context": {},
           "state": "008"
         }
       }
-    ], 
-    "params": [], 
+    ],
+    "params": [],
     "trigger": {
-      "intent": "INTENT_NO", 
-      "slots": [], 
+      "intent": "INTENT_NO",
+      "slots": [],
       "state": "007"
     }
   }

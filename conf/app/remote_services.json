@@ -1,7 +1,7 @@
 {
     "unit_bot": {
-        "naming_service_url": "https://aip.baidubce.com",
-        "service_api": "https://aip.baidubce.com/rpc/2.0/unit/bot/chat",
+        "naming_service_url": "http://localhost:5000",
+        "service_api": "http://localhost:5000/nlu",
         "load_balancer_name": "",
         "protocol": "http",
         "timeout_ms": 2000,
