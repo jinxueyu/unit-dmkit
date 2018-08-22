@@ -1,0 +1,815 @@
+[
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "喂，你好"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "003"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_timeout_short",
+      "slots": [],
+      "state": ""
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不需要，谢谢。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "002"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "INTENT_SALE",
+      "slots": [],
+      "state": "001"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不需要，谢谢。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "002"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "INTENT_SALE",
+      "slots": [],
+      "state": ""
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不需要，谢谢。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "002"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "INTENT_SALE",
+      "slots": [],
+      "state": "003"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "是我，您是哪位？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "005"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_name",
+      "slots": [
+        "owner_name"
+      ],
+      "state": ""
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "是我，您是哪位？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "005"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_name",
+      "slots": [
+        "owner_name"
+      ],
+      "state": "001"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "近期不看机会，谢谢。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "004"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_headhunt",
+      "slots": [],
+      "state": "005"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "微信就是我的手机号。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "006"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_wechat",
+      "slots": [],
+      "state": "004"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "在什么位置？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "007"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_delivery_food",
+      "slots": [],
+      "state": ""
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "在什么位置？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "007"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_delivery_food",
+      "slots": [],
+      "state": "001"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "在什么位置？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "007"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_delivery_food",
+      "slots": [],
+      "state": "003"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "好，稍等，我去取。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "008"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_unknow",
+      "slots": [],
+      "state": "007"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "您好"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "001"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "greeting",
+      "slots": [],
+      "state": ""
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不是，你打错了。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "015"
+        }
+      },
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "是我，您是哪位？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "009"
+        }
+      }
+    ],
+    "params": [
+      {
+        "name": "number",
+        "type": "slot_val",
+        "value": "phone_number"
+      },
+      {
+        "name": "my_number",
+        "type": "func_val",
+        "value": "get_my_phone_number"
+      }
+    ],
+    "trigger": {
+      "intent": "intent_phone_owner",
+      "slots": [
+        "phone_number"
+      ],
+      "state": "001"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不是，你打错了。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "015"
+        }
+      },
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "是我，您是哪位？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "009"
+        }
+      }
+    ],
+    "params": [
+      {
+        "name": "number",
+        "type": "slot_val",
+        "value": "phone_number"
+      },
+      {
+        "name": "my_number",
+        "type": "func_val",
+        "value": "get_my_phone_number"
+      }
+    ],
+    "trigger": {
+      "intent": "intent_phone_owner",
+      "slots": [
+        "phone_number"
+      ],
+      "state": "003"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不是，你打错了。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "015"
+        }
+      },
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "是我，您是哪位？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "009"
+        }
+      }
+    ],
+    "params": [
+      {
+        "name": "number",
+        "type": "slot_val",
+        "value": "phone_number"
+      },
+      {
+        "name": "my_number",
+        "type": "func_val",
+        "value": "get_my_phone_number"
+      }
+    ],
+    "trigger": {
+      "intent": "intent_phone_owner",
+      "slots": [
+        "phone_number"
+      ],
+      "state": ""
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [
+          {
+            "type": "eq",
+            "value": "{%relation%},{%my_relation%}"
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "是我，您是哪位？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "011"
+        }
+      },
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不是，你打错了。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "015"
+        }
+      }
+    ],
+    "params": [
+      {
+        "name": "member",
+        "type": "slot_val",
+        "value": "family_member"
+      },
+      {
+        "name": "relation",
+        "type": "slot_val",
+        "value": "family_relation"
+      },
+      {
+        "name": "my_relation",
+        "type": "func_val",
+        "value": "get_relation_with_me:{%member%}"
+      }
+    ],
+    "trigger": {
+      "intent": "intent_relation",
+      "slots": [
+        "family_member",
+        "family_relation"
+      ],
+      "state": "001"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [
+          {
+            "type": "eq",
+            "value": "{%relation%},{%my_relation%}"
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "是我，您是哪位？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "011"
+        }
+      },
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不是，你打错了。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "015"
+        }
+      }
+    ],
+    "params": [
+      {
+        "name": "member",
+        "type": "slot_val",
+        "value": "family_member"
+      },
+      {
+        "name": "relation",
+        "type": "slot_val",
+        "value": "family_relation"
+      },
+      {
+        "name": "my_relation",
+        "type": "func_val",
+        "value": "get_relation_with_me:{%member%}"
+      }
+    ],
+    "trigger": {
+      "intent": "intent_relation",
+      "slots": [
+        "family_member",
+        "family_relation"
+      ],
+      "state": "003"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [
+          {
+            "type": "eq",
+            "value": "{%relation%},{%my_relation%}"
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "是我，您是哪位？"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "011"
+        }
+      },
+      {
+        "assertion": [
+          {
+            "type": "",
+            "value": ""
+          }
+        ],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不是，你打错了。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "015"
+        }
+      }
+    ],
+    "params": [
+      {
+        "name": "member",
+        "type": "slot_val",
+        "value": "family_member"
+      },
+      {
+        "name": "relation",
+        "type": "slot_val",
+        "value": "family_relation"
+      },
+      {
+        "name": "my_relation",
+        "type": "func_val",
+        "value": "get_relation_with_me:{%member%}"
+      }
+    ],
+    "trigger": {
+      "intent": "intent_relation",
+      "slots": [
+        "family_member",
+        "family_relation"
+      ],
+      "state": ""
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不需要，谢谢。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "010"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_unknow",
+      "slots": [],
+      "state": "009"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不需要，谢谢。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "012"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_unknow",
+      "slots": [],
+      "state": "011"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不好意思，现在有点忙，以后再联系吧，再见。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "013"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_unknow",
+      "slots": [],
+      "state": "004"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "不好意思，现在有点忙，以后再联系吧，再见。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "013"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_unknow",
+      "slots": [],
+      "state": "006"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "好的，再见。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "014"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_keep_touch",
+      "slots": [],
+      "state": "006"
+    }
+  },
+  {
+    "output": [
+      {
+        "assertion": [],
+        "result": [
+          {
+            "type": "tts",
+            "value": "好的，再见。"
+          }
+        ],
+        "session": {
+          "context": {},
+          "state": "014"
+        }
+      }
+    ],
+    "params": [],
+    "trigger": {
+      "intent": "intent_bye",
+      "slots": [],
+      "state": "004"
+    }
+  }
+]
